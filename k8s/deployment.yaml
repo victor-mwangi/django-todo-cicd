@@ -3,40 +3,28 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-
   name: todo-deployment
 
   labels:
-
     app: todo-app
 
 spec:
-
   replicas: 3
 
   selector:
-
     matchLabels:
-
       app: todo-app
 
   template:
-
     metadata:
-
       labels:
-
         app: todo-app
 
     spec:
-
       containers:
+        - name: todo-app
 
-      - name: todo-app
+          image: vickvick/django-todo:latest
 
-        image: trainwithshubham/django-todo:latest
-
-        ports:
-
-        - containerPort: 8000
-
+          ports:
+            - containerPort: 8000
