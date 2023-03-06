@@ -12,7 +12,7 @@ spec:
 
   - name: todo-app
 
-    image: vickvick/django-todo:latest
+    image: vickvick/todoapp:v1
 
     ports:
 
